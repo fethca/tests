@@ -1,0 +1,10 @@
+{
+  "include": ["src", "vitest.config.ts"],
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2022",
+    "module": "commonjs",
+    "declaration": true,
+    "strict": true
+  }
+}
