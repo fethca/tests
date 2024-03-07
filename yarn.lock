@@ -236,10 +236,10 @@
   resolved "https://registry.npmjs.org/@fethcat/prettier-config/-/prettier-config-1.0.2.tgz#5972de870b66c73fd5142ea35ec8e872f7aabaa0"
   integrity sha512-+79RKhai/vR9F68BzGbu3SJohyys7/8EPzMdoNHApgb+Y2McdDa0vWxPwpux0VJI1JTdIxX4cdAjJmhIeGQUnQ==
 
-"@fethcat/version@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@fethcat/version/-/version-0.0.4.tgz#d117c6bd5f58a30f4b7ad851d1e25003641a5371"
-  integrity sha512-/6Jp6L8jvLkezh0LSQU75Ao1NUYhrFOTvfOMXRDL7tAeiJQpovTIDgCknn272Rj8r4zaBhLWmAboyVXR9iqT9A==
+"@fethcat/version@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.npmjs.org/@fethcat/version/-/version-0.0.6.tgz#5484fd72104c2829973f9298558f6ad08fd45a09"
+  integrity sha512-qrxjx8rIcEgEyyf+4OMI8zakZ/E8oUnJ5o9dr5/CvPOAYxyVKYw9NYu3PvrzXgBc5imCVeo12nsg3Je16crYrA==
   dependencies:
     async-exec "^1.1.0"
 
