@@ -1,6 +1,6 @@
-import { UserConfig } from 'vitest/config'
+import { InlineConfig } from 'vitest'
 
-export function defineTestConfig(config: Partial<UserConfig['test']> = {}): UserConfig['test'] {
+export function defineTestConfig(config: Partial<InlineConfig> = {}): InlineConfig {
   return {
     globals: true,
     clearMocks: true,
@@ -10,7 +10,8 @@ export function defineTestConfig(config: Partial<UserConfig['test']> = {}): User
     exclude: ['tests/**/*.snap'],
     coverage: {
       provider: 'v8',
-      exclude: ['**/mocks.ts', '**/index.ts', 'tests/**', 'types/**'],
+      include: ['src/**'],
+      exclude: ['**/mocks.ts', '**/index.ts'],
     },
     ...config,
   }
