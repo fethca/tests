@@ -10,7 +10,7 @@ export function defineTestConfig(config: Partial<UserConfig['test']> = {}): User
     exclude: ['tests/**/*.snap'],
     coverage: {
       provider: 'v8',
-      exclude: ['**/mocks.ts', '**/index.ts'],
+      exclude: ['**/mocks.ts', '**/index.ts', 'tests/**', 'types/**'],
     },
     ...config,
   }
