@@ -5,7 +5,13 @@
 Install package:
 
 ```bash
-yarn add @fethcat/tests
+pnpm add @fethcat/tests
+```
+
+Install peerDependencies:
+
+```bash
+pnpm add vitest @vitest/coverage-v8 
 ```
 
 Define test config:
