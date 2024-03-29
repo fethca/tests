@@ -9,21 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
       # Setup Node environment
       - uses: actions/setup-node@v3
         with:
           node-version: '20.9.0'
+          cache: 'pnpm'
           registry-url: 'https://registry.npmjs.org' 
-      # Cache PNPM store
-      - uses: actions/cache@v3
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-      # Install PNPM
-      - name: Install PNPM
-        run: npm install -g pnpm
       # Install dependencies with PNPM
       - name: Install Dependencies
         run: pnpm install
