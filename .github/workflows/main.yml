@@ -14,6 +14,9 @@ jobs:
         with:
           node-version: '20.9.0'
           registry-url: 'https://registry.npmjs.org' 
+      # Install PNPM
+      - name: Install PNPM
+        run: npm install -g pnpm
       # Install dependencies with PNPM
       - name: Install Dependencies
         run: pnpm install
