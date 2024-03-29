@@ -9,11 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # Setup .npmrc file to publish to npm
+      # Setup Node environment
       - uses: actions/setup-node@v3
         with:
           node-version: '20.9.0'
           registry-url: 'https://registry.npmjs.org' 
+      # Cache PNPM store
+      - uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
       # Install PNPM
       - name: Install PNPM
         run: npm install -g pnpm
@@ -25,6 +32,6 @@ jobs:
         run: pnpm run build
       # Publish the package to npm with PNPM
       - name: Publish
-        run: pnpm publish --access=public
+        run: pnpm publish --access=public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
