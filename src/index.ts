@@ -1,4 +1,4 @@
-import { InlineConfig } from 'vitest'
+import type { InlineConfig } from 'vitest/node'
 
 export function defineTestConfig(config: Partial<InlineConfig> = {}): InlineConfig {
   return {
