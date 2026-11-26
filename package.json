@@ -25,7 +25,7 @@
   "devDependencies": {
     "@fethcat/eslint-plugin": "^0.0.4",
     "@fethcat/prettier-config": "^1.0.5",
-    "@fethcat/version": "^0.0.16",
+    "@fethcat/version": "^0.0.18",
     "@types/node": "^24.19.4",
     "eslint": "^10.15.0",
     "prettier": "^3.10.1",
